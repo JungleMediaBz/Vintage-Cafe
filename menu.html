@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Menu - Vintage Cafe</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .menu-section {
+      padding: 40px 20px;
+    }
+    .menu-category {
+      margin-bottom: 40px;
+    }
+    .menu-category-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    .item-price {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo"><img src="images/logo-new.png" alt="Vintage Cafe Logo"></div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="about.html" class="nav-link">ABOUT US</a>
+        <a href="menu.html" class="nav-link">MENU</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+      </nav>
+    </header>
+
+    <!-- Menu Content -->
+    <section class="menu-section">
+      <h1 class="section-title">OUR MENU</h1>
+      <p style="text-align: center; opacity: 0.8;">Click on items to add them to your order.</p>
+
+      <!-- Coffee & Beverages -->
+      <div class="menu-category">
+        <h2 class="menu-category-title">☕ Coffee & Beverages</h2>
+        <div class="taste-grid">
+          <div class="taste-item menu-item-selectable" data-name="Blueberry Matcha Latte" data-price="7.50"><h3>Blueberry Matcha Latte</h3><span class="item-price">$7.50</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Spooky Coffee Seasonal Special" data-price="8.00"><h3>Spooky Coffee Seasonal Special</h3><span class="item-price">$8.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Classic Espresso Macchiato" data-price="4.50"><h3>Classic Espresso Macchiato</h3><span class="item-price">$4.50</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Iced Caramel Cold Brew" data-price="6.50"><h3>Iced Caramel Cold Brew</h3><span class="item-price">$6.50</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Bleu Lemonade" data-price="5.00"><h3>Bleu Lemonade</h3><span class="item-price">$5.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Cocoa Tea" data-price="4.00"><h3>Cocoa Tea</h3><span class="item-price">$4.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Vanilla Bean Latte" data-price="6.00"><h3>Vanilla Bean Latte</h3><span class="item-price">$6.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Mango-Passion Fruit Smoothie" data-price="7.00"><h3>Mango-Passion Fruit Smoothie</h3><span class="item-price">$7.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+        </div>
+      </div>
+
+      <!-- Pastries & Breakfast -->
+      <div class="menu-category">
+        <h2 class="menu-category-title">🥐 Pastries & Breakfast</h2>
+        <div class="taste-grid">
+          <div class="taste-item menu-item-selectable" data-name="Coconut Crème Croissant" data-price="5.50"><h3>Coconut Crème Croissant</h3><span class="item-price">$5.50</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Almond Croissant" data-price="5.00"><h3>Almond Croissant</h3><span class="item-price">$5.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Classic Butter Croissant" data-price="4.00"><h3>Classic Butter Croissant</h3><span class="item-price">$4.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Blueberry Muffin" data-price="3.50"><h3>Blueberry Muffin</h3><span class="item-price">$3.50</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Banana Bread Slice" data-price="3.00"><h3>Banana Bread Slice</h3><span class="item-price">$3.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Sourdough Toast with Avocado & Poached Egg" data-price="9.00"><h3>Sourdough Toast with Avocado & Poached Egg</h3><span class="item-price">$9.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Granola & Greek Yogurt Parfait" data-price="6.50"><h3>Granola & Greek Yogurt Parfait</h3><span class="item-price">$6.50</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Belgian Waffle with Maple Syrup & Fresh Berries" data-price="10.00"><h3>Belgian Waffle with Maple Syrup & Fresh Berries</h3><span class="item-price">$10.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+        </div>
+      </div>
+
+      <!-- Bread & Bakery Items -->
+      <div class="menu-category">
+        <h2 class="menu-category-title">🍞 Bread & Bakery Items</h2>
+        <div class="taste-grid">
+          <div class="taste-item menu-item-selectable" data-name="Country Sourdough Loaf" data-price="8.00"><h3>Country Sourdough Loaf</h3><span class="item-price">$8.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Multigrain Seeded Loaf" data-price="8.50"><h3>Multigrain Seeded Loaf</h3><span class="item-price">$8.50</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Baguette Traditional" data-price="4.00"><h3>Baguette Traditional</h3><span class="item-price">$4.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Focaccia Rosemary & Sea Salt" data-price="6.00"><h3>Focaccia Rosemary & Sea Salt</h3><span class="item-price">$6.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Cinnamon Roll (large, bakery-style)" data-price="5.00"><h3>Cinnamon Roll (large, bakery-style)</h3><span class="item-price">$5.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Chocolate Chip Brioche" data-price="7.00"><h3>Chocolate Chip Brioche</h3><span class="item-price">$7.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Rustic Ciabatta Rolls (pack of 4)" data-price="5.00"><h3>Rustic Ciabatta Rolls (pack of 4)</h3><span class="item-price">$5.00</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+          <div class="taste-item menu-item-selectable" data-name="Sweet Banana Walnut Bread" data-price="7.50"><h3>Sweet Banana Walnut Bread</h3><span class="item-price">$7.50</span><div class="item-controls"><button class="quantity-btn minus-btn">-</button><span class="item-quantity">0</span><button class="quantity-btn plus-btn">+</button></div></div>
+        </div>
+      </div>
+
+      <div id="order-actions" style="text-align: center; margin-top: 40px; display: none;">
+        <button id="btn-place-order" class="btn-discover">Place Online Order (<span id="cart-count">0</span>)</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="social-icons">
+        <a href="https://www.instagram.com/bleubakery.em" target="_blank" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.441-.645 1.441-1.44s-.646-1.44-1.441-1.44z"/></svg>
+        </a>
+        <a href="#" target="_blank" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+      <p>&copy; 2024 Vintage Cafe. All Rights Reserved.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
