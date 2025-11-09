@@ -145,7 +145,8 @@ body {
   color: #5d4037;
   margin-bottom: 30px;
   opacity: 0.9;
-  display: none;
+  /* Make description visible by default */
+  display: block; 
 }
 
 .btn-discover {
@@ -575,11 +576,12 @@ body {
   .hero-title {
     font-size: 36px;
   }
-  
+
   .hero-visual {
     margin-top: 30px;
+    height: 300px; /* Adjust height for mobile */
   }
-  
+
   .coffee-showcase {
     flex-direction: column;
     gap: 30px;
@@ -595,13 +597,12 @@ body {
   }
   
   .about-card {
-    padding: 30px 20px;
+    padding: 30px;
   }
   
   .section-title {
     font-size: 20px;
-    padding: 12px 20px;
-  }  
+  }
 
   /* --- Mobile App-like Bottom Navigation --- */
   .nav {
@@ -633,15 +634,11 @@ body {
     padding-bottom: 70px;
   }
 
-  /* Adjust header for mobile to just be the logo */
+  /* Adjust header for mobile */
   .header {
     justify-content: center; /* Center the logo */
-  }
-
-  /* On mobile, the nav is a bottom bar, so it shouldn't be displayed in the header flow */
-  .header .nav {
-    /* This rule is overridden by the more specific .nav styles below for the bottom bar */
-    display: none; 
+    position: relative;
+    z-index: 1001; /* Ensure it's above other content */
   }
 
   /* --- Mobile Layout Adjustments --- */
@@ -650,6 +647,11 @@ body {
     align-items: center;
   }
   .about-text-container {
+    text-align: center;
+  }
+
+  .contact-card {
+    padding: 30px 20px;
     text-align: center;
   }
 
@@ -666,6 +668,10 @@ body {
 @media (max-width: 480px) {
   .hero-title {
     font-size: 28px;
+  }
+
+  .hero-bg-text {
+    font-size: 80px; /* Reduce background text size */
   }
 
   .taste-grid {
@@ -687,7 +693,7 @@ body {
 
   /* Ensure footer has enough space from bottom nav */
   .site-footer {
-    margin-bottom: 60px;
+    margin-bottom: 70px; /* Match nav height */
   }
 }
 
@@ -730,8 +736,8 @@ body {
 /* Footer */
 .site-footer {
   background: #fdfaf9;
-  padding: 30px 20px;
-  margin-top: 225px;
+  padding: 40px 20px;
+  margin-top: 60px; /* Adjusted margin */
   text-align: center;
 }
 
@@ -815,4 +821,41 @@ body {
   font-size: 14px;
   font-weight: bold;
   opacity: 0.9;
+}
+
+/* Menu Page Specifics */
+.menu-section {
+  padding: 40px 20px;
+}
+.menu-category {
+  margin-bottom: 40px;
+}
+.menu-category-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #efebe9;
+}
+.item-price {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Contact Page Specifics */
+.contact-section {
+  padding: 40px 20px;
+}
+.contact-card {
+  background: #fdfaf9;
+  border-radius: 25px;
+  padding: 40px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #efebe9;
+}
+.contact-card p {
+  margin-bottom: 15px;
+  line-height: 1.8;
 }
