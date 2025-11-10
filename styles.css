@@ -444,12 +444,12 @@ body {
 }
 
 .showcase-cup {
-  width: 180px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-  filter: brightness(1.1);
+  width: 540px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none; /* Remove the old box-shadow */
+  filter: brightness(1.1) drop-shadow(0 15px 20px rgba(0, 0, 0, 0.3)); /* Use drop-shadow filter for PNGs */
 }
 
 /* Taste Selection Section */

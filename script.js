@@ -117,12 +117,46 @@ document.addEventListener('DOMContentLoaded', () => {
       checkoutForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const location = document.getElementById('pickup-location').value;
+        const pickupTime = document.getElementById('pickup-time').value;
+
         if (!location) {
           alert('Please select a pickup location.');
           return;
         }
+
+        // --- WhatsApp Integration ---
+        const whatsappNumber = '5016352183'; // Your WhatsApp number without '+' or spaces
+        let message = `*New Order from Vintage Cafe Website!* ☕\n\n`;
+        message += "*Order Details:*\n";
+        
+        let finalTotal = 0;
+        cart.forEach(item => {
+          const itemTotal = item.price * item.quantity;
+          message += `- ${item.name} (x${item.quantity}) - $${itemTotal.toFixed(2)}\n`;
+          finalTotal += itemTotal;
+        });
+
+        message += `\n*Total: $${finalTotal.toFixed(2)}*\n\n`;
+        message += `*Pickup Location:*\n${location}\n\n`;
+        message += `*Pickup Time:*\n${pickupTime}\n`;
+
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+        // Display a thank you message on the page first
+        orderSection.innerHTML = `
+          <div class="logo" style="display: flex; justify-content: center; margin-bottom: 20px;"><img src="images/logo-new.png" alt="Vintage Cafe Logo" style="height: 80px;"></div>
+          <h1 class="section-title">Thank You!</h1>
+          <p class="about-text" style="color: #3e2723;">Your order details have been prepared. We are now redirecting you to WhatsApp to confirm and send your order.</p>
+          <p class="about-text" style="color: #3e2723;">If you are not redirected automatically, <a href="${whatsappUrl}" target="_blank" style="color: #8d6e63; font-weight: bold;">click here</a>.</p>
+        `;
+
+        // Clear the cart from local storage
         localStorage.removeItem('bleuBakeryCart'); // Clear cart
-        orderSection.innerHTML = `<div class="logo" style="display: flex; justify-content: center; margin-bottom: 20px;"><img src="images/logo-new.png" alt="Bleu Bakery Logo" style="height: 80px;"></div><h1 class="section-title">Thank You!</h1><p class="about-text">Your order has been placed. It will be ready for pickup at <strong>${location}</strong> shortly.</p><p><a href="index.html" style="color:white;">Back to Home</a></p>`;
+
+        // Redirect to WhatsApp after a short delay
+        setTimeout(() => {
+          window.location.href = whatsappUrl;
+        }, 3000); // 3-second delay
       });
     }
   }
